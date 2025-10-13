@@ -1,6 +1,9 @@
 import { generateId } from '@sprucelabs/test-utils'
 
-export let callsToReadFile: string[] = []
+export let callsToReadFile: {
+    path: string
+    options?: Record<string, unknown>
+}[] = []
 
 export function resetCallsToReadFile() {
     callsToReadFile = []
@@ -12,7 +15,10 @@ export function setFakeReadFileResult(result: string) {
     fakeReadFileResult = result
 }
 
-export default async function fakeReadFile(file: string) {
-    callsToReadFile.push(file)
+export default async function fakeReadFile(
+    path: string,
+    options?: Record<string, unknown>
+) {
+    callsToReadFile.push({ path, options })
     return fakeReadFileResult
 }
