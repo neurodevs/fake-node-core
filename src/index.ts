@@ -23,3 +23,8 @@ export * from './testDoubles/fs-promises/fakeWriteFile'
 
 export { default as fakeFetch } from './testDoubles/node/fakeFetch'
 export * from './testDoubles/node/fakeFetch'
+
+// process
+
+export { default as fakeChdir } from './testDoubles/process/fakeChdir'
+export * from './testDoubles/process/fakeChdir'
