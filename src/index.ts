@@ -1,3 +1,8 @@
+// fs-extra
+
+export { default as fakePathExists } from './testDoubles/fs-extra/fakePathExists'
+export * from './testDoubles/fs-extra/fakePathExists'
+
 // fs-promises
 
 export { default as fakeMkdir } from './testDoubles/fs-promises/fakeMkdir'
