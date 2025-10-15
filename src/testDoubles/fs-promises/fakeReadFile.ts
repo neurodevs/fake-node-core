@@ -17,10 +17,19 @@ export function setFakeReadFileResult(path: string, result: string) {
     fakeReadFileResult[path] = result
 }
 
+export let fakeReadFileThrowsFor: string[] = []
+
+export function setFakeReadFileThrowsFor(path: string) {
+    fakeReadFileThrowsFor.push(path)
+}
+
 export default async function fakeReadFile(
     path: string,
     options?: Record<string, unknown>
 ) {
     callsToReadFile.push({ path, options })
+    if (fakeReadFileThrowsFor.includes(path)) {
+        throw new Error(`Fake readFile error for path: ${path}!`)
+    }
     return fakeReadFileResult[path] ?? defaultFakeReadFileResult
 }
