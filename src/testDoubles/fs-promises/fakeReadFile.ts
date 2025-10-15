@@ -1,4 +1,4 @@
-import { generateId } from '@sprucelabs/test-utils'
+import generateId from '@neurodevs/generate-id'
 
 export let callsToReadFile: {
     path: string
@@ -9,10 +9,12 @@ export function resetCallsToReadFile() {
     callsToReadFile = []
 }
 
-export let fakeReadFileResult = generateId()
+export const defaultFakeReadFileResult = generateId()
 
-export function setFakeReadFileResult(result: string) {
-    fakeReadFileResult = result
+export let fakeReadFileResult: Record<string, string> = {}
+
+export function setFakeReadFileResult(path: string, result: string) {
+    fakeReadFileResult[path] = result
 }
 
 export default async function fakeReadFile(
@@ -20,5 +22,5 @@ export default async function fakeReadFile(
     options?: Record<string, unknown>
 ) {
     callsToReadFile.push({ path, options })
-    return fakeReadFileResult
+    return fakeReadFileResult[path] ?? defaultFakeReadFileResult
 }
