@@ -6,13 +6,13 @@ export function resetCallsToExec() {
     callsToExec = []
 }
 
-export let fakeExecResult: ChildProcess = {} as ChildProcess
+export let fakeExecResult: Record<string, ChildProcess> = {}
 
-export function setFakeExecResult(result: ChildProcess) {
-    fakeExecResult = result
+export function setFakeExecResult(command: string, result: ChildProcess) {
+    fakeExecResult[command] = result
 }
 
 export default async function fakeExec(command: string) {
     callsToExec.push(command)
-    return fakeExecResult
+    return fakeExecResult[command]
 }
