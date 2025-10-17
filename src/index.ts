@@ -3,6 +3,11 @@
 export { default as fakeExec } from './testDoubles/child_process/fakeExec'
 export * from './testDoubles/child_process/fakeExec'
 
+// console
+
+export { default as fakeLog } from './testDoubles/console/fakeLog'
+export * from './testDoubles/console/fakeLog'
+
 // fs-extra
 
 export { default as fakePathExists } from './testDoubles/fs-extra/fakePathExists'
