@@ -1,5 +1,3 @@
-import { mkdir } from 'fs/promises'
-
 export let callsToMkdir: { path: string; options: any }[] = []
 
 export function resetCallsToMkdir() {
@@ -12,5 +10,3 @@ export default async function fakeMkdir(
 ) {
     callsToMkdir.push({ path, options })
 }
-
-mkdir
