@@ -1,6 +1,6 @@
 {
   "name": "@neurodevs/fake-node-core",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Lightweight fakes and test doubles for Node.js core modules like fs, os, and path.",
   "type": "module",
   "keywords": [
@@ -44,10 +44,10 @@
     "watch.tsc": "tsc -w"
   },
   "dependencies": {
-    "@neurodevs/generate-id": "^1.0.8"
+    "@neurodevs/generate-id": "^1.0.9"
   },
   "devDependencies": {
-    "@neurodevs/node-tdd": "^0.1.2",
+    "@neurodevs/node-tdd": "^0.1.3",
     "@types/node": "^24.7.2",
     "chokidar-cli": "^3.0.0",
     "eslint": "^9.37.0",
