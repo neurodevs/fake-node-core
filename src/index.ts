@@ -1,35 +1,35 @@
 // child_process
 
-export { default as fakeExec } from './testDoubles/child_process/fakeExec'
-export * from './testDoubles/child_process/fakeExec'
+export { default as fakeExec } from './testDoubles/child_process/fakeExec.js'
+export * from './testDoubles/child_process/fakeExec.js'
 
 // console
 
-export { default as fakeLog } from './testDoubles/console/fakeLog'
-export * from './testDoubles/console/fakeLog'
+export { default as fakeLog } from './testDoubles/console/fakeLog.js'
+export * from './testDoubles/console/fakeLog.js'
 
 // fs-extra
 
-export { default as fakePathExists } from './testDoubles/fs-extra/fakePathExists'
-export * from './testDoubles/fs-extra/fakePathExists'
+export { default as fakePathExists } from './testDoubles/fs-extra/fakePathExists.js'
+export * from './testDoubles/fs-extra/fakePathExists.js'
 
 // fs-promises
 
-export { default as fakeMkdir } from './testDoubles/fs-promises/fakeMkdir'
-export * from './testDoubles/fs-promises/fakeMkdir'
+export { default as fakeMkdir } from './testDoubles/fs-promises/fakeMkdir.js'
+export * from './testDoubles/fs-promises/fakeMkdir.js'
 
-export { default as fakeReadFile } from './testDoubles/fs-promises/fakeReadFile'
-export * from './testDoubles/fs-promises/fakeReadFile'
+export { default as fakeReadFile } from './testDoubles/fs-promises/fakeReadFile.js'
+export * from './testDoubles/fs-promises/fakeReadFile.js'
 
-export { default as fakeWriteFile } from './testDoubles/fs-promises/fakeWriteFile'
-export * from './testDoubles/fs-promises/fakeWriteFile'
+export { default as fakeWriteFile } from './testDoubles/fs-promises/fakeWriteFile.js'
+export * from './testDoubles/fs-promises/fakeWriteFile.js'
 
 // node
 
-export { default as fakeFetch } from './testDoubles/node/fakeFetch'
-export * from './testDoubles/node/fakeFetch'
+export { default as fakeFetch } from './testDoubles/node/fakeFetch.js'
+export * from './testDoubles/node/fakeFetch.js'
 
 // process
 
-export { default as fakeChdir } from './testDoubles/process/fakeChdir'
-export * from './testDoubles/process/fakeChdir'
+export { default as fakeChdir } from './testDoubles/process/fakeChdir.js'
+export * from './testDoubles/process/fakeChdir.js'
