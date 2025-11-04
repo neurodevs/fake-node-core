@@ -18,6 +18,9 @@ export * from './testDoubles/fs-extra/fakePathExists.js'
 export { default as fakeMkdir } from './testDoubles/fs-promises/fakeMkdir.js'
 export * from './testDoubles/fs-promises/fakeMkdir.js'
 
+export { default as fakeReadDir } from './testDoubles/fs-promises/fakeReadDir.js'
+export * from './testDoubles/fs-promises/fakeReadDir.js'
+
 export { default as fakeReadFile } from './testDoubles/fs-promises/fakeReadFile.js'
 export * from './testDoubles/fs-promises/fakeReadFile.js'
 
