@@ -14,8 +14,10 @@ export const defaultFileName = generateId()
 
 export const stringReadDirResult = [defaultDirName, defaultFileName]
 
-export const direntReadDirResult: Dirent[] = [
-    {
+export const direntReadDirResult: Dirent[] = [createFakeDir(), createFakeFile()]
+
+export function createFakeDir(options?: Partial<Dirent>): Dirent {
+    return {
         name: defaultDirName,
         parentPath: defaultParentPath,
         isDirectory: () => true,
@@ -25,8 +27,12 @@ export const direntReadDirResult: Dirent[] = [
         isSymbolicLink: () => false,
         isFIFO: () => false,
         isSocket: () => false,
-    },
-    {
+        ...options,
+    }
+}
+
+export function createFakeFile(options?: Partial<Dirent>): Dirent {
+    return {
         name: defaultFileName,
         parentPath: defaultParentPath,
         isDirectory: () => false,
@@ -36,8 +42,9 @@ export const direntReadDirResult: Dirent[] = [
         isSymbolicLink: () => false,
         isFIFO: () => false,
         isSocket: () => false,
-    },
-]
+        ...options,
+    }
+}
 
 export let fakeReadDirResult: Record<string, string[] | Dirent[]> = {}
 
