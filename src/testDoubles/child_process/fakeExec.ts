@@ -1,6 +1,9 @@
 import { ChildProcess } from 'child_process'
 
-export let callsToExec: string[] = []
+export let callsToExec: {
+    command: string
+    options?: Record<string, unknown>
+}[] = []
 
 export function resetCallsToExec() {
     callsToExec = []
@@ -18,7 +21,10 @@ export let resetFakeExecResults = () => {
     fakeExecResult = {}
 }
 
-export default async function fakeExec(command: string) {
-    callsToExec.push(command)
+export default async function fakeExec(
+    command: string,
+    options?: Record<string, unknown>
+) {
+    callsToExec.push({ command, options })
     return fakeExecResult[command] ?? defaultExecResult
 }
