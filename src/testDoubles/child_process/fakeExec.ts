@@ -21,10 +21,10 @@ export let resetFakeExecResults = () => {
     fakeExecResult = {}
 }
 
-export const shouldThrowFor = new Set<string>()
+export const execThrowsFor = new Set<string>()
 
-export function setShouldThrowFor(command: string) {
-    shouldThrowFor.add(command)
+export function setExecThrowsFor(command: string) {
+    execThrowsFor.add(command)
 }
 
 export default async function fakeExec(
@@ -33,7 +33,7 @@ export default async function fakeExec(
 ) {
     callsToExec.push({ command, options })
 
-    if (shouldThrowFor.has(command)) {
+    if (execThrowsFor.has(command)) {
         throw new Error(`Fake exec error for command: ${command}`)
     }
 
