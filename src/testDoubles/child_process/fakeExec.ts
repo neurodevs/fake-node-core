@@ -27,6 +27,10 @@ export function setExecThrowsFor(command: string) {
     execThrowsFor.add(command)
 }
 
+export function resetExecThrowsFor() {
+    execThrowsFor.clear()
+}
+
 export default async function fakeExec(
     command: string,
     options?: Record<string, unknown>
