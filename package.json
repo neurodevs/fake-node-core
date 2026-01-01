@@ -44,7 +44,7 @@
     "watch.tsc": "tsc -w"
   },
   "dependencies": {
-    "@neurodevs/generate-id": "1.1.1"
+    "@neurodevs/generate-id": "1.1.2"
   },
   "devDependencies": {
     "@neurodevs/node-tdd": "0.2.3",
