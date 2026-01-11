@@ -29,8 +29,8 @@ export * from './testDoubles/fs-promises/fakeWriteFile.js'
 
 // http
 
-export { default as fakeHttp } from './testDoubles/http/FakeHttp.js'
-export * from './testDoubles/http/FakeHttp.js'
+export { default as fakeHttp } from './testDoubles/http/fakeHttp.js'
+export * from './testDoubles/http/fakeHttp.js'
 
 export { default as FakeHttpServer } from './testDoubles/http/FakeHttpServer.js'
 export * from './testDoubles/http/FakeHttpServer.js'
