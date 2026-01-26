@@ -5,6 +5,9 @@ export * from './testDoubles/child_process/fakeExec.js'
 
 // console
 
+export { default as fakeError } from './testDoubles/console/fakeError.js'
+export * from './testDoubles/console/fakeError.js'
+
 export { default as fakeLog } from './testDoubles/console/fakeLog.js'
 export * from './testDoubles/console/fakeLog.js'
 
