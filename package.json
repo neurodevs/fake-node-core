@@ -1,6 +1,6 @@
 {
   "name": "@neurodevs/fake-node-core",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "Lightweight fakes and test doubles for Node.js core modules like fs, os, and path.",
   "type": "module",
   "keywords": [

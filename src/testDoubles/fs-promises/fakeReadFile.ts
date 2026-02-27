@@ -23,6 +23,10 @@ export function setFakeReadFileThrowsFor(path: string) {
     fakeReadFileThrowsFor.push(path)
 }
 
+export function resetFakeReadFileThrowsFor() {
+    fakeReadFileThrowsFor = []
+}
+
 export default async function fakeReadFile(
     path: string,
     options?: Record<string, unknown>
