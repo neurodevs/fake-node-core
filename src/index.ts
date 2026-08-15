@@ -5,11 +5,20 @@ export * from './testDoubles/child_process/fakeExec.js'
 
 // console
 
+export { default as fakeConsole } from './testDoubles/console/fakeConsole.js'
+export * from './testDoubles/console/fakeConsole.js'
+
 export { default as fakeError } from './testDoubles/console/fakeError.js'
 export * from './testDoubles/console/fakeError.js'
 
+export { default as fakeInfo } from './testDoubles/console/fakeInfo.js'
+export * from './testDoubles/console/fakeInfo.js'
+
 export { default as fakeLog } from './testDoubles/console/fakeLog.js'
 export * from './testDoubles/console/fakeLog.js'
+
+export { default as fakeWarn } from './testDoubles/console/fakeWarn.js'
+export * from './testDoubles/console/fakeWarn.js'
 
 // fs-extra
 

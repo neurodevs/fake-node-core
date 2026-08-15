@@ -1,4 +1,4 @@
-import { ChildProcess } from 'child_process'
+import { ChildProcess } from 'node:child_process'
 
 export let callsToExec: {
     command: string

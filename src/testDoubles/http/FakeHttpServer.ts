@@ -1,4 +1,4 @@
-import { RequestListener } from 'http'
+import { RequestListener } from 'node:http'
 
 export default class FakeHttpServer {
     public static callsToConstructor: (RequestListener | undefined)[] = []

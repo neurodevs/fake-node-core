@@ -1,4 +1,4 @@
-import { RequestListener } from 'http'
+import { RequestListener } from 'node:http'
 import FakeHttpServer from './FakeHttpServer.js'
 
 export let callsToHttpCreateServer: (RequestListener | undefined)[] = []

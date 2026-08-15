@@ -1,5 +1,5 @@
-import { ObjectEncodingOptions } from 'fs'
-import type { Dirent } from 'fs'
+import { ObjectEncodingOptions } from 'node:fs'
+import type { Dirent } from 'node:fs'
 import generateId from '@neurodevs/generate-id'
 
 export let callsToReadDir: { path: string; options?: ReadDirOptions }[] = []
